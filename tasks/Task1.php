@@ -1,18 +1,4 @@
 <?php
-// Створюємо клас Plane
-class Coor {
-	var $name_flight;
-	var $name_company;
-	var $pilot_surname;
-	var $pilot_name;
-	var $city_from;
-	var $city_to;
-	var $price;
-	var $time;
-	var $mark;
-
-
-}
 
 header("Content-Type: text/html; charset=utf-8");
 ?>
@@ -71,22 +57,22 @@ header("Content-Type: text/html; charset=utf-8");
 </div>
 </br>
 
-	<form  action="task1.php" method="POST"> 
-     Вивести усіх рейси в порядку зростання вартості квитка:
+	<form  action="ticket_price.php" method="POST"> 
+     Вивести усі рейси в порядку зростання вартості квитка:
      <br/><input type="submit" value="OK">
 	</form>
 </br>
 
 
-	<form  action="task1.php" method="POST"> 
+	<form  action="lviv.php" method="POST"> 
      Обчислити кількість рейсів, що відлітають до Львова:
      <br/><input type="submit" value="OK">
 	</form>
 </br>
 
-	<form  action="task1.php" method="POST"> 
+	<form  action="pilot.php" method="POST"> 
      Рейси, за штурвалом яких будуть пілоти з прізвищем, що містить задані символи: 
-     <input type="text" name="number">
+     <input type="text" name="pilot">
      <br/><input type="submit" value="OK">
 	</form>
 
