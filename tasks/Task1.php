@@ -8,9 +8,11 @@ header("Content-Type: text/html; charset=utf-8");
     <title>Рух літаків</title>
     <style type="text/css">
     	.main {
+    		width: 500px;
     		border: 4px double black;
     	}
-    </style>
+    	
+     </style>
  
 </head>
 <body>
@@ -22,37 +24,57 @@ header("Content-Type: text/html; charset=utf-8");
 
 <div  class="main">
 	<form  action="file.php" method="POST"> 
-    <div class="field">
+	<div class="field">
     Добавлення нового запису у файл:
     </div>
+    <table>
+    <tr>
     <div class="field">
-    Назва рейсу: <input type="text" name="name_flight">
+    <td> Назва рейсу:</td> <td><input required type="text" name="name_flight"></td>
 	</div>
+	</tr>
+	<tr>
 	<div class="field">
-	Назва компанії, що здійснює перевезення: <input type="text" name="name_company">
+	<td>Назва компанії, що здійснює перевезення:</td> <td><input type="text" name="name_company" value="невідомо"></td>
 	</div>
+	</tr>
+	<tr>
 	<div class="field">
-	Прізвище пілота: <input type="text" name="pilot_surname">
+	<td>Прізвище пілота:</td> <td><input required type="text" name="pilot_surname"></td>
 	</div>
+	</tr>
+	<tr>
 	<div class="field">
-	Ім'я пілота: <input type="text" name="pilot_name">
+	<td>Ім'я пілота:</td> <td><input type="text" name="pilot_name" value="невідомо"></td>
 	</div>
+	</tr>
+	<tr>
 	<div class="field">
-	Пункт відправлення: <input type="text" name="city_from">
+	<td>Пункт відправлення:</td> <td><input required type="text" name="city_from"></td>
 	</div>
+	</tr>
+	<tr>
 	<div class="field">
-	Пункт призначення: <input type="text" name="city_to">
+	<td>Пункт призначення:</td> <td><input required type="text" name="city_to"></td>
 	</div>
+	</tr>
+	<tr>
 	<div class="field">
-	Вартість квитка: <input type="text" name="price">
+	<td>Вартість квитка:</td> <td><input type="number" name="price" step="0.01" value="0"> </td>
 	</div>
+	</tr>
+	<tr>
 	<div class="field">
-	Час вильоту: <input type="text" name="time">
+	<td>Час вильоту:</td> <td><input required type="datetime" name="time"></td>
 	</div>
+	</tr>
+	<tr>
 	<div class="field">
-	Марка літака: <input type="text" name="mark">
-	<br/><input type="submit" value="OK">
+	<td>Марка літака:</td> <td><input type="text" name="mark" value="невідомо"></td>
 	</div>
+	</tr>
+	</table>
+	<input type="submit" value="OK">
 	</form>
 </div>
 </br>
