@@ -3,11 +3,7 @@
    header("Content-Type: text/html; charset=utf-8");
 
 
-$host = "localhost";
-$db="flight_db";
-$user = "root";
-$password = ""; 
-$dbh = mysqli_connect($host, $user, $password, $db) or die("Не можу з'єднатися з MySQLi.");
+include ("connect.php");
 
 if (isset($_POST['delete'])) {
     $res = mysqli_query ($dbh, "SELECT * FROM airlines WHERE ID_airline='".$_POST["company_name"]."'");

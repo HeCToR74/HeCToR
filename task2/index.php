@@ -19,12 +19,9 @@ header("Content-Type: text/html; charset=utf-8");
 <body>
 
 <?php
-$host = "localhost";
-$db="flight_db";
-$user = "root";
-$password = ""; 
-$dbh = mysqli_connect($host, $user, $password, $db) or die("Не можу з'єднатися з MySQLi.");
+include ("connect.php");
 ?>
+
 
 
 <table>
