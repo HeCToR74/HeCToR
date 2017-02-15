@@ -1,9 +1,9 @@
 <?php
 
-class Countries {
+class Airplanes {
 
-	protected $ID_country;
-	protected $name_country;
+	protected $ID_airplane;
+	protected $mark_airplane;
 
 	public function __construct() {
  		
@@ -26,7 +26,7 @@ class Countries {
  	}
 
  	public function closeConnection() {
-
+ 		
  	}
 
 }

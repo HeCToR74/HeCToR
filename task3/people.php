@@ -1,9 +1,10 @@
 <?php
 
-class Countries {
+class People {
 
-	protected $ID_country;
-	protected $name_country;
+	protected $ID_people;
+	protected $last_name;
+	protected $first_name;
 
 	public function __construct() {
  		
@@ -26,7 +27,7 @@ class Countries {
  	}
 
  	public function closeConnection() {
-
+ 		
  	}
 
 }

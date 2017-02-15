@@ -1,9 +1,13 @@
 <?php
 
-class Countries {
+class Cities {
 
-	protected $ID_country;
+	protected $ID_city;
+	protected $name_city;
 	protected $name_country;
+	protected $number;
+	protected $mayor;
+
 
 	public function __construct() {
  		
@@ -26,7 +30,7 @@ class Countries {
  	}
 
  	public function closeConnection() {
-
+ 		
  	}
 
 }

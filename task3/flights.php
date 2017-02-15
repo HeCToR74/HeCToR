@@ -1,9 +1,15 @@
 <?php
 
-class Countries {
+class Flights {
 
-	protected $ID_country;
-	protected $name_country;
+	protected $ID_flight;
+	protected $name_airline;
+	protected $city_from;
+	protected $city_to;
+	protected $price;
+	protected $time;
+	protected $mark_airplane;
+
 
 	public function __construct() {
  		
@@ -26,7 +32,7 @@ class Countries {
  	}
 
  	public function closeConnection() {
-
+ 		
  	}
 
 }
