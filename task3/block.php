@@ -144,5 +144,65 @@ if ($block=="countrie_delete"){
     echo "</tr>";
 }
 
+
+if ($block=="airline_edit"){
+    echo "<table>";
+    echo "<tr>";
+    echo "<th>Редагування</th>";
+    echo "<th>Назва авіакомпанії</th>";
+    echo "<th>Рік заснування</th>";
+    echo "<th>Адреса головного офісу</th>";
+    echo "<th>Прізвище та ім'я президента компанії</th>";
+    echo "</tr>";
+}
+
+if ($block=="city_edit"){
+    echo "<table>";
+    echo "<tr>";
+    echo "<th>Редагування</th>";
+    echo "<th>Назва міста</th>";
+    echo "<th>Назва країни</th>";
+    echo "<th>Кількість жителів</th>";
+    echo "<th>Прізвище та і'мя мера</th>";
+    echo "</tr>";
+}
+
+if ($block=="countrie_edit"){
+    echo "<table>";
+    echo "<tr>";
+    echo "<th>Редагування</th>";
+    echo "<th>Назва країни</th>";
+    echo "</tr>";
+}
+
+if ($block=="mark_edit"){
+    echo "<table>";
+    echo "<tr>";
+    echo "<th>Редагування</th>";
+    echo "<th>Назва марки літака</th>";
+    echo "</tr>";
+}
+
+if ($block=="people_edit"){
+    echo "<table>";
+    echo "<tr>";
+    echo "<th>Редагування</th>";
+    echo "<th>Прізвище</th>";
+    echo "<th>Ім'я</th>";
+    echo "</tr>";
+}
+
+if ($block=="flight_edit"){
+    echo "<table>";
+    echo "<tr>";
+    echo "<th>Редагування</th>";
+    echo "<th>Назва компанії</th>";
+    echo "<th>Пункт відправлення</th>";
+    echo "<th>Пункт призначення</th>";
+    echo "<th>Вартість квитка</th>";
+    echo "<th>Дата і час вильоту</th>";
+    echo "<th>Марка літака</th>";
+    echo "</tr>";
+}
 ?>
 

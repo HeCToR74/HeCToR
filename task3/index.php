@@ -1,7 +1,7 @@
 <?php
-
-header("Content-Type: text/html; charset=utf-8");
+include ("connect.php");
 ?>
+
 
 <!DOCTYPE html><html>
 <head><meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -17,12 +17,6 @@ header("Content-Type: text/html; charset=utf-8");
  
 </head>
 <body>
-
-<?php
-include ("connect.php");
-?>
-
-
 
 <table>
 	<tr>
@@ -58,7 +52,8 @@ include ("connect.php");
 										$res = mysqli_query ($dbh, "SELECT ID_city, name_city 
 											FROM cities");
 										while($row = mysqli_fetch_array($res)){
-											echo "<option>".$row['name_city']."</option>";
+											echo "<option value='"
+											.$row['ID_city']."'>".$row['name_city']."</option>";
 										}
 									?>
 			   					</select>
@@ -72,7 +67,8 @@ include ("connect.php");
 										$res = mysqli_query ($dbh, "SELECT ID_city, name_city 
 											FROM cities");
 										while($row = mysqli_fetch_array($res)){
-											echo "<option>".$row['name_city']."</option>";
+											echo "<option value='"
+											.$row['ID_city']."'>".$row['name_city']."</option>";
 										}
 									?>
 			   					</select>
@@ -94,7 +90,8 @@ include ("connect.php");
 										$res = mysqli_query ($dbh, "SELECT ID_mark, mark_name 
 											FROM mark_airplanes");
 										while($row = mysqli_fetch_array($res)){
-											echo "<option>".$row['mark_name']."</option>";
+											echo "<option value='"
+											.$row['ID_mark']."'>".$row['mark_name']."</option>";
 										}
 									?>
 			   					</select>
