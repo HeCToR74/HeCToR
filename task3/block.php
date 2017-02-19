@@ -46,13 +46,13 @@ if ($block=="people"){
 if ($block=="flight"){
     echo "<table>";
     echo "<tr>";
-    echo "<th><a href='sort.php?s=".$s."&flag= ORDER BY ID_flight'>Назва рейсу</a></th>";
-    echo "<th><a href='sort.php?s=".$s."&flag= ORDER BY name_airline'>Назва компанії</a></th>";
-    echo "<th><a href='sort.php?s=".$s."&flag= ORDER BY city_from'>Пункт відправлення</a></th>";
-    echo "<th><a href='sort.php?s=".$s."&flag= ORDER BY city_to'>Пункт призначення</a></th>";
-    echo "<th><a href='sort.php?s=".$s."&flag= ORDER BY price'>Вартість квитка</a></th>";
-    echo "<th><a href='sort.php?s=".$s."&flag= ORDER BY time'>Дата і час вильоту</a></th>";
-    echo "<th><a href='sort.php?s=".$s."&flag= ORDER BY mark_name'>Марка літака</a></th>";
+    echo "<th><a href='sort.php?what=".$what."&from=".$from."&inner_join1=".$inner_join1."&inner_join2=".$inner_join2."&order=ID_flight'>Назва рейсу</a></th>";
+    echo "<th><a href='sort.php?what=".$what."&from=".$from."&inner_join1=".$inner_join1."&inner_join2=".$inner_join2."&order=name_airline'>Назва компанії</a></th>";
+    echo "<th><a href='sort.php?what=".$what."&from=".$from."&inner_join1=".$inner_join1."&inner_join2=".$inner_join2."&order=city_from'>Пункт відправлення</a></th>";
+    echo "<th><a href='sort.php?what=".$what."&from=".$from."&inner_join1=".$inner_join1."&inner_join2=".$inner_join2."&order=city_to'>Пункт призначення</a></th>";
+    echo "<th><a href='sort.php?what=".$what."&from=".$from."&inner_join1=".$inner_join1."&inner_join2=".$inner_join2."&order=price'>Вартість квитка</a></th>";
+    echo "<th><a href='sort.php?what=".$what."&from=".$from."&inner_join1=".$inner_join1."&inner_join2=".$inner_join2."&order=time'>Дата і час вильоту</a></th>";
+    echo "<th><a href='sort.php?what=".$what."&from=".$from."&inner_join1=".$inner_join1."&inner_join2=".$inner_join2."&order=mark_name'>Марка літака</a></th>";
     echo "</tr>";
 }
 

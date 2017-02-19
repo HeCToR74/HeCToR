@@ -3,8 +3,6 @@
 include ("connect.php");
 
 if (isset($_POST['from_file'])) {
-	$block="flight";
-	include ("block.php");
 
 	include ("DB_class.php");
 	
@@ -14,11 +12,14 @@ if (isset($_POST['from_file'])) {
 	$from = 'flight';
 	$inner_join1 = 'airlines ON flight.name_company=airlines.ID_airline 
 		INNER JOIN cities ON flight.city_from=cities.ID_city 
-		INNER JOIN cities AS cities_2 ON flight.city_to=cities_2.ID_city
+		INNER JOIN cities AS cities_2 ON flight.city_to=cities_2.ID_city 
 		INNER JOIN mark_airplanes';
 	$inner_join2 = 'flight.mark=mark_airplanes.ID_mark';
 
 	$res=$db->select($what, $from, $inner_join1, $inner_join2);
+
+	$block="flight";
+	include ("block.php");
 
 	for ($i = 0; $i < count($res); $i++) {
    		echo "<tr>";

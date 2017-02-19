@@ -8,5 +8,4 @@ $dbh = mysqli_connect($host, $user, $password, $dbname) or die("Не можу з
 
 mysqli_set_charset($dbh, 'utf8' );
 
-
 ?>

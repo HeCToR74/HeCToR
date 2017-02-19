@@ -1,5 +1,6 @@
 <?php
 include ("connect.php");
+include ("DB_class.php")
 ?>
 
 
@@ -33,13 +34,19 @@ include ("connect.php");
 							<td>
 								<select name="name_company">
 									<?php
-										$res = mysqli_query ($dbh, "SELECT ID_airline, name_airline 
-											FROM airlines");
-										while($row = mysqli_fetch_array($res)){
+									$db = new DB_class ($host, $user, $password, $dbname);
+
+									$what="ID_airline, name_airline";
+									$from="airlines";
+
+									$res=$db->select($what, $from);
+
+									for ($i = 0; $i < count($res); $i++){
 											echo "<option value='"
-											.$row['ID_airline']."'>".$row['name_airline'].
+											.$res[$i]['ID_airline']."'>".$res[$i]['name_airline'].
 											"</option>";
 										}
+									$db->closeConnection();
 									?>
 			   					</select>
 			   				</td>
@@ -49,12 +56,19 @@ include ("connect.php");
 							<td>					
 								<select name="city_from">
 									<?php
-										$res = mysqli_query ($dbh, "SELECT ID_city, name_city 
-											FROM cities");
-										while($row = mysqli_fetch_array($res)){
+									$db = new DB_class ($host, $user, $password, $dbname);
+
+									$what="ID_city, name_city";
+									$from="cities";
+
+									$res=$db->select($what, $from);
+
+									for ($i = 0; $i < count($res); $i++)
+										{
 											echo "<option value='"
-											.$row['ID_city']."'>".$row['name_city']."</option>";
+											.$res[$i]['ID_city']."'>".$res[$i]['name_city']."</option>";
 										}
+									$db->closeConnection();
 									?>
 			   					</select>
 			   				</td>
@@ -64,12 +78,19 @@ include ("connect.php");
 							<td>					
 								<select name="city_to">
 									<?php
-										$res = mysqli_query ($dbh, "SELECT ID_city, name_city 
-											FROM cities");
-										while($row = mysqli_fetch_array($res)){
+									$db = new DB_class ($host, $user, $password, $dbname);
+
+									$what="ID_city, name_city";
+									$from="cities";
+
+									$res=$db->select($what, $from);
+
+									for ($i = 0; $i < count($res); $i++)
+										{
 											echo "<option value='"
-											.$row['ID_city']."'>".$row['name_city']."</option>";
+											.$res[$i]['ID_city']."'>".$res[$i]['name_city']."</option>";
 										}
+									$db->closeConnection();
 									?>
 			   					</select>
 			   				</td>
@@ -86,13 +107,20 @@ include ("connect.php");
 							<td>Марка літака:</td> 
 							<td>					
 								<select name="mark">
-									<?php
-										$res = mysqli_query ($dbh, "SELECT ID_mark, mark_name 
-											FROM mark_airplanes");
-										while($row = mysqli_fetch_array($res)){
+									<?php		
+									$db = new DB_class ($host, $user, $password, $dbname);
+
+									$what="ID_mark, mark_name";
+									$from="mark_airplanes";
+
+									$res=$db->select($what, $from);
+
+									for ($i = 0; $i < count($res); $i++)
+										{
 											echo "<option value='"
-											.$row['ID_mark']."'>".$row['mark_name']."</option>";
+											.$res[$i]['ID_mark']."'>".$res[$i]['mark_name']."</option>";
 										}
+									$db->closeConnection();
 									?>
 			   					</select>
 			   				</td>
@@ -135,13 +163,20 @@ include ("connect.php");
 			   			    <td> Презедент авіакомпанії:</td> 
 							<td>
 								<select name="president">
-									<?php
-										$res = mysqli_query ($dbh, "SELECT ID_people,	last_name, first_name
-											FROM people");
-										while($row = mysqli_fetch_array($res)){
-											echo "<option>".$row['last_name']." ".$row['first_name'].
+									<?php	
+									$db = new DB_class ($host, $user, $password, $dbname);
+
+									$what="ID_people, last_name, first_name";
+									$from="people";
+
+									$res=$db->select($what, $from);
+
+									for ($i = 0; $i < count($res); $i++)
+										{
+											echo "<option>".$res[$i]['last_name']." ".$res[$i]['first_name'].
 											"</option>";
 										}
+									$db->closeConnection();				
 									?>
 								</select>
 			   				</td>
@@ -175,11 +210,18 @@ include ("connect.php");
 							<td>
 								<select name="country">
 									<?php
-										$res = mysqli_query ($dbh, "SELECT ID_countrie, name_countrie 
-											FROM countries");
-										while($row = mysqli_fetch_array($res)){
-											echo "<option>".$row['name_countrie']."</option>";
+									$db = new DB_class ($host, $user, $password, $dbname);
+
+									$what="ID_countrie, name_countrie";
+									$from="countries";
+
+									$res=$db->select($what, $from);
+
+									for ($i = 0; $i < count($res); $i++)
+										{
+											echo "<option>".$res[$i]['name_countrie']."</option>";
 										}
+									$db->closeConnection();
 									?>
 								</select>
 			   				</td>
@@ -194,12 +236,20 @@ include ("connect.php");
 							<td>
 								<select name="mayor_name">
 									<?php
-										$res = mysqli_query ($dbh, "SELECT ID_people,	last_name, first_name
-											FROM people");
-										while($row = mysqli_fetch_array($res)){
-											echo "<option>".$row['last_name']." ".$row['first_name'].
+									$db = new DB_class ($host, $user, $password, $dbname);
+
+									$what="ID_people, last_name, first_name";
+									$from="people";
+
+									$res=$db->select($what, $from);
+
+									for ($i = 0; $i < count($res); $i++)
+										{
+											echo "<option>".$res[$i]['last_name']." ".$res[$i]['first_name'].
 											"</option>";
 										}
+									$db->closeConnection();	
+									
 									?>
 								</select>
 			   				</td>
@@ -306,11 +356,6 @@ include ("connect.php");
 	<form  action="search.php" method="POST"> 		
 		<input type="submit" value="Перехід на сторінку пошуку"></td>
 	</form>
-
-<?php
-mysqli_close($dbh);
-?>
-
 
 </body>
 </html>
